@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Determination of Chromium Oxide Content in Leather - (ISO 5398-1 / ASTM D2807 / IS 582)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Slide Deck Header -->
+  <header class="deck-header">
+    <div class="deck-header-row">
+      <div>
+        <h1 class="deck-title">Determination of Chromium Oxide Content (% Cr₂O₃) in Chrome-Tanned Leather</h1>
+      </div>
+      <div class="deck-meta-box">
+        <span class="standard-label">ISO 5398-1:2007 | ASTM D2807 | IS 582</span>
+        <button id="btn-deck-reset" class="btn-deck-reset">Reset Experiment</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Step Progress Strip (Slides 1 to 8) -->
+  <nav class="slide-progress-strip" aria-label="Experiment Procedure Steps">
+    <div class="progress-track">
+      <div class="progress-step active" data-step="1">
+        <span class="step-num">Step 01</span>
+        <span class="step-name">Sampling &amp; Weighing</span>
+      </div>
+      <div class="progress-step disabled" data-step="2">
+        <span class="step-num">Step 02</span>
+        <span class="step-name">Acid Reagents</span>
+      </div>
+      <div class="progress-step disabled" data-step="3">
+        <span class="step-num">Step 03</span>
+        <span class="step-name">Wet Oxidation</span>
+      </div>
+      <div class="progress-step disabled" data-step="4">
+        <span class="step-num">Step 04</span>
+        <span class="step-name">Dilution &amp; Cl₂ Expulsion</span>
+      </div>
+      <div class="progress-step disabled" data-step="5">
+        <span class="step-num">Step 05</span>
+        <span class="step-name">Iodide Addition</span>
+      </div>
+      <div class="progress-step disabled" data-step="6">
+        <span class="step-num">Step 06</span>
+        <span class="step-name">Burette Setup</span>
+      </div>
+      <div class="progress-step disabled" data-step="7">
+        <span class="step-num">Step 07</span>
+        <span class="step-name">Titration &amp; Endpoint</span>
+      </div>
+      <div class="progress-step disabled" data-step="8">
+        <span class="step-num">Step 08</span>
+        <span class="step-name">Results &amp; Certificate</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Slide Presentation Frame -->
+  <main class="deck-main-container">
+    <section class="slide-frame">
+      
+      <!-- Slide Top Banner -->
+      <div class="slide-top-banner">
+        <div>
+          <div class="slide-numbering" id="slide-number-display">Slide 1 of 8</div>
+          <h2 class="slide-heading" id="slide-title-display">Leather Specimen Sampling &amp; Analytical Weighing</h2>
+          <div class="slide-subheading" id="slide-subtitle-display">Sampling per ISO 2418 and 4-decimal precision mass determination per ISO 5398-1</div>
+        </div>
+        <div class="slide-standard-cite" id="slide-standard-display">Standard: ISO 5398-1 Clause 6.1</div>
+      </div>
+
+      <!-- Slide Split Body: Workbench + Control Console -->
+      <div class="slide-body-split">
+        
+        <!-- Left: Workbench Stage (Visual Realism) -->
+        <div class="workbench-stage">
+          <div class="bench-header-strip">
+            <span id="bench-title-tag">Analytical Instrument &amp; Chemical Stage</span>
+            <span id="bench-status-indicator">Station Calibrated</span>
+          </div>
+          <div class="bench-viewport">
+            <div class="bench-grid-surface"></div>
+            <div id="workbench-render-area" style="width: 100%; display: flex; align-items: center; justify-content: center; z-index: 1;">
+              <!-- Dynamic realistic instrument injected here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Control Console & Student Instructional Guide -->
+        <aside class="control-sidebar">
+          
+          <!-- Student Instructional Guide Card -->
+          <div class="instruction-guide-block">
+            <div class="guide-badge-row">
+              <span class="guide-pill">Instructional Guide</span>
+              <span class="step-status-tag locked" id="step-completion-badge">STEP INCOMPLETE</span>
+            </div>
+
+            <div class="guide-procedure-text" id="sop-text-content">
+              <!-- Instructional SOP text injected dynamically -->
+            </div>
+
+            <!-- Standard Operating Procedure & Instructions -->
+            <div class="student-guide-sections">
+              <div class="guide-pane how">
+                <div class="guide-pane-heading">Step-by-Step Practical Procedure</div>
+                <div class="guide-pane-body" id="guide-how-content"></div>
+              </div>
+            </div>
+
+            <!-- Apparatus & Materials Used in this Step -->
+            <div class="apparatus-checklist-box">
+              <div class="checklist-title">
+                <span>Apparatus &amp; Materials Used:</span>
+                <span style="font-size:0.65rem; color:#64748b;">ISO Specifications</span>
+              </div>
+              <ul class="checklist-items-list" id="apparatus-checklist-content">
+                <!-- Injected dynamically per step -->
+              </ul>
+            </div>
+
+            <div class="directed-action-banner pending" id="sop-action-content">
+              <!-- Clear procedural action required -->
+            </div>
+          </div>
+
+          <!-- Interactive Control & Configuration Console -->
+          <div class="interactive-panel">
+            
+            <div class="panel-section-title">Test Configuration</div>
+
+            <!-- Leather Sample Selector -->
+            <div class="control-field">
+              <label class="field-label" for="select-leather-sample">Select Leather Specimen:</label>
+              <select id="select-leather-sample" class="field-select">
+                <option value="bovine-upper">Full Chrome Bovine Shoe Upper (Wet-Blue / Crust)</option>
+                <option value="goat-glazed">Glazed Kid Goat Upper Leather (Premium Dress)</option>
+                <option value="lining-pigskin">Chrome Tanned Shoe Lining Leather</option>
+                <option value="military-boot">Waterproof Military Combat Boot Upper</option>
+              </select>
+            </div>
+
+            <div class="panel-section-title">Apparatus Operational Controls</div>
+
+            <!-- Step Action Buttons Area -->
+            <div id="step-controls-area" style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <!-- Buttons injected dynamically per slide -->
+            </div>
+
+            <div class="panel-section-title">Instrumentation Telemetry</div>
+
+            <!-- Instrument Digital Readout Card -->
+            <div class="instrument-readout-card" id="instrument-telemetry-box">
+              <div class="readout-meta">
+                <span id="telemetry-label">Parameter Status</span>
+                <span id="telemetry-unit">Reading</span>
+              </div>
+              <div class="readout-value" id="telemetry-value-display">--</div>
+              <div class="readout-status-line" id="telemetry-status-display">Ready for initialization</div>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Slide Deck Navigation Footer -->
+      <footer class="slide-footer-nav">
+        <div class="slide-counter-tag" id="slide-progress-counter">Step 1 of 8</div>
+        <div class="footer-nav-buttons">
+          <button id="btn-slide-prev" class="btn-nav btn-nav-prev" disabled>Previous Step</button>
+          <button id="btn-slide-next" class="btn-nav btn-nav-next" disabled>Next Step</button>
+        </div>
+      </footer>
+
+    </section>
+  </main>
+
+  <!-- External Scripts -->
+  <script src="standards-data.js"></script>
+  <script src="lab-engine.js"></script>
+
+</body>
+</html>
